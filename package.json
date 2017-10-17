@@ -1,0 +1,19 @@
+{
+  "name": "hangman-cli",
+  "version": "1.0.0",
+  "description": "Hangman game that runs in the command line",
+  "main": "hangman.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexWetzel/Hangman-CLI.git"
+  },
+  "author": "Alex Wetzel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexWetzel/Hangman-CLI/issues"
+  },
+  "homepage": "https://github.com/AlexWetzel/Hangman-CLI#readme"
+}
