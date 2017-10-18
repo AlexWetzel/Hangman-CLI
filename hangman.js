@@ -1,30 +1,13 @@
-var guess = process.argv[2]
+var Word = require("./word.js");
 
-var wordObject = {
-	wordname: "word",
-	display: "",
-	letterObjects: [
-		{letter: "w", display: "_"},
-		{letter: "o", display: "_"},
-		{letter: "r", display: "_"},
-		{letter: "d", display: "_"}
-	],
-	printLetters: function(){
-		this.display = ""
-		for (var i = 0; i < this.letterObjects.length; i++) {
-			this.display += this.letterObjects[i].display + " "
-		}
-		console.log(this.display)
-	},
-	guessLetter: function(guess){
-		for (var i = 0; i < this.letterObjects.length; i++) {
-			if(guess === this.letterObjects[i].letter) {
-				this.letterObjects[i].display = guess
-			}
-		}
-		this.printLetters();
-	}
-}
+var guess = process.argv[2];
 
+var keyWord = "this is a word"; 
+
+var wordObject = new Word(keyWord);
+
+wordObject.splitWord();
 wordObject.printLetters()
 wordObject.guessLetter(guess)
+
+console.log()
