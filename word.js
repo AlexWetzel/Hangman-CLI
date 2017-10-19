@@ -13,10 +13,17 @@ var Word = function(keyWord) {
 		console.log(this.display)
 	};
 	this.guessLetter = function(guess) {
+		var turnPenalty = 1;
 		for (var i = 0; i < this.letters.length; i++) {
-			this.letters[i].check(guess);
+			var isGuessed = this.letters[i].check(guess);
+			if (isGuessed === true) {
+				this.letterCount--
+				turnPenalty = 0;
+			}
+
 		}
 		this.printLetters();
+		return turnPenalty;
 	};
 	this.splitWord = function() {		
 		for (var i = 0; i < this.keyWord.length; i++) {
@@ -35,9 +42,6 @@ var Word = function(keyWord) {
 		}
 		this.printLetters();	
 	};
-	this.print = function() {
-		console.log(this.letterCount);
-	}
 };
 
 module.exports = Word;
