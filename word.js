@@ -2,6 +2,7 @@ var Letter = require("./letter.js");
 
 var Word = function(keyWord) {
 	this.keyWord = keyWord;
+	this.letterCount = keyWord.length;
 	this.display = "";
 	this.letters = [];
 	this.printLetters = function() {
@@ -25,12 +26,18 @@ var Word = function(keyWord) {
 
 			if (char === " ") {
 				filler = " ";
+				this.letterCount -= 1;
 			};
 			// console.log(filler)
 			var newLetter = new Letter(char, filler);
 			this.letters.push(newLetter);
-		}		
+			
+		}
+		this.printLetters();	
 	};
+	this.print = function() {
+		console.log(this.letterCount);
+	}
 };
 
 module.exports = Word;

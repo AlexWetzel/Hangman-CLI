@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/AlexWetzel/Hangman-CLI/issues"
   },
-  "homepage": "https://github.com/AlexWetzel/Hangman-CLI#readme"
+  "homepage": "https://github.com/AlexWetzel/Hangman-CLI#readme",
+  "dependencies": {
+    "prompt": "^1.0.0"
+  }
 }
