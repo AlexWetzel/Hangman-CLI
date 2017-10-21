@@ -25,7 +25,6 @@ var Word = function(keyWord) {
 			//Constructed objects are pushed to the letters array
 			this.letters.push(newLetter);			
 		}
-		console.log("\n");
 		this.printLetters();	
 	};
 	//Displays the hangman word
@@ -70,15 +69,15 @@ var Word = function(keyWord) {
 	this.message = function(penalty) {
 		//0 penalty means a guess is correct
 		if (penalty === 0) {
-			console.log("\n\nCorrect!")
+			console.log("\n\nCorrect!\n")
 		}
 		//-1 means a guess is repeated
 		else if (penalty === -1) {
-			console.log("\n\nYou've guessed that already!");
+			console.log("\n\nYou've guessed that already!\n");
 		}
 		//Any other value (expecting 1) means the guess was incorrect
 		else {
-			console.log("\n\nIncorrect!")
+			console.log("\n\nIncorrect!\n")
 		}
 		this.printLetters();
 	}

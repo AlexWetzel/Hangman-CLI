@@ -12,10 +12,11 @@ var wordNum = 0;
 //Construsts an object from the first word in the word list array
 var newWord = new Word(wordList.words[wordNum]);
 
+prompt.start();
+
+console.log("\n\nPress a letter key to enter your guess\n");
 //Prepares the selected word for the game
 newWord.splitWord();
-
-prompt.start();
 
 var round = function() {
 	//when the player still has turns and there are letters left, the player may guess letters
@@ -27,7 +28,6 @@ var round = function() {
 			//Determines the turn penalty from the result of the guess
 			var turnCost = newWord.guessLetter(result.guess);
 			turns -= turnCost;
-			
 			round();
 		});		
 	}
